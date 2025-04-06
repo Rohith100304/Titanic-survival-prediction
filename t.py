@@ -33,12 +33,12 @@ def get_user_input():
     
     with col2:
         
-        sex = st.selectbox('Sex', ['Male', 'Female'])
+        sex = st.selectbox('Sex', ['0', '1'])
         fare = st.number_input('Fare Paid', min_value=0.0, max_value=600.0, value=30.0, step=0.1)
-        embarked = st.selectbox('Port of Embarkation', ['Cherbourg', 'Queenstown', 'Southampton'])
+        embarked = st.selectbox('Port of Embarkation', ['0', '1', '2'])
     
-    sex = 1 if sex == 'Female' else 0
-    embarked_mapping = {'Cherbourg': 0, 'Queenstown': 1, 'Southampton': 2}
+    sex = 1 if sex == '1' else 0
+    embarked_mapping = {'0': 0, '1': 1, '2': 2}
     embarked = embarked_mapping[embarked]
     
     user_data = {

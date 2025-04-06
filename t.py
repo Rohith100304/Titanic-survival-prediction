@@ -34,7 +34,7 @@ def get_user_input():
     
     col1, col2 = st.columns(2)
     
-    with col1
+    with col1:
         age = st.number_input('Age', min_value=0.0, max_value=100.0, value=30.0, step=0.5)
         sibsp = st.number_input('Number of Siblings/Spouses Aboard', min_value=0, max_value=10, value=0)
         parch = st.number_input('Number of Parents/Children Aboard', min_value=0, max_value=10, value=0)
